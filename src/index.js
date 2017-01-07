@@ -1,5 +1,4 @@
 import * as d3 from "d3"
-import axios from "axios"
 
 const drawChart = (data) => {
 
@@ -123,10 +122,7 @@ const drawChart = (data) => {
      .text(d => !d ? "Doping allegations" : "No doping allegations")
 }
 
-axios.get('https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/cyclist-data.json')
-  .then((response) => {
-    drawChart(response.data);
-  })
-  .catch((err) => {
-    console.warn('Error:' + err);
-  });
+d3.json('https://raw.githubusercontent.com/FreeCodeCamp/ProjectReferenceData/master/cyclist-data.json', (err, data) => {
+  if (err) return console.warn(err);
+  drawChart(data);
+});
