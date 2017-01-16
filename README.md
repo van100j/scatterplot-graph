@@ -1,4 +1,4 @@
-Visualize Data with Scatterplot Graph
+Visualize Data with Scatterplot Graph 
 =====================
 
 [FCC's Visualize Data with Scatterplot Graph project challenge](https://www.freecodecamp.com/challenges/visualize-data-with-a-scatterplot-graph):
